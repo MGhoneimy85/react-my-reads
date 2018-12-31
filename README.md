@@ -26,9 +26,14 @@ To get started developing right away:
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
     ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
+    │   ├── search.svg
     │   ├── arrow-back.svg
     │   └── arrow-drop-down.svg
+    ├── components # components folder
+    │   ├── Book  # book render UI and dropdown to update shelf cat
+    │   ├── ListBooks  # listing all shelf categories and books under each categorie
+    │   ├── Loading  # loading Div to be shown when response time  working with a flag in the state
+    │   └── SearchBook  # search for a book with keywords 
     ├── index.css # Global styles. You probably won't need to change anything here.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
