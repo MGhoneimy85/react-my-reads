@@ -48,7 +48,6 @@ class BooksApp extends React.Component {
 
       <div className="app">
         {this.state.loading ? <Loading /> : null}
-        {/* <Loading /> */}
         <Route exact path="/" render={() => (
           <Redirect to="/ListBooks" />
         )} />
@@ -60,7 +59,13 @@ class BooksApp extends React.Component {
             />
           )}
         />
-        <Route path="/SearchBook" component={SearchBook} />
+        <Route path="/SearchBook" 
+        render={({history}) => (
+          <SearchBook
+            books={this.state.allBooks}
+            onUpdate={this.UpdateBookShelf}
+          />
+        )} />
       </div>
     )
   }

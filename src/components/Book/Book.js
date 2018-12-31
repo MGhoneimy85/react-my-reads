@@ -5,13 +5,23 @@ class Book extends Component {
     book: PropTypes.object.isRequired,
     onUpdateBook: PropTypes.func.isRequired
   }
+  state = {
+    value: this.props.book.shelf
+  }
+
+  updateVal(val){
+    
+    this.props.onUpdateBook(this.props.book,val)
+    this.setState({ value : val })
+  }
 
   render() {
-    return (<li><div className="book">
+    return (<li key={this.props.book.id}>
+      <div className="book">
     <div className="book-top">
-      <div className="book-cover" style={{ backgroundImage: `url("${this.props.book.imageLinks.thumbnail}")` }}></div>
+    {this.props.book.imageLinks ?  <div className="book-cover" style={{backgroundImage: "url(" + this.props.book.imageLinks.smallThumbnail + ")"}}></div> : null}
       <div className="book-shelf-changer">
-        <select value={this.props.book.shelf} onChange={event => this.props.onUpdateBook(this.props.book, event.target.value)}>
+        <select value={this.state.value ?  this.state.value : 'none' } onChange={event =>  this.updateVal( event.target.value)}>
           <option value="move" disabled>Move to...</option>
           <option value="currentlyReading">Currently Reading</option>
           <option value="wantToRead">Want to Read</option>
