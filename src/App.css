@@ -22,12 +22,13 @@ body, .app {
   font-weight: 400;
   margin: 0;
   color: white;
+  text-transform: uppercase;
 }
 
 .list-books-content {
   padding: 0 0 80px;
   flex: 1;
-  background: lightblue;
+  background: aliceblue;
   min-height: calc(100vh - 68px);
 }
 
@@ -166,15 +167,25 @@ button:active {
 .book-top {
   position: relative;
   height: 200px;
+  width: 140px;
   display: flex;
   align-items: flex-end;
+  background: #999;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.book-top .book-cover{
+  height:190px!important;
+  width:130px!important;
+  border-radius: 5px;
 }
 
 .book-shelf-changer {
   cursor: pointer;
   position: absolute;
-  right: 0;
-  bottom: -10px;
+  right: -15px;
+  bottom: -15px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
