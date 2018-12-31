@@ -178,8 +178,8 @@ button:active {
 }
 
 .book-top .book-cover{
-  height:190px!important;
-  width:130px!important;
+  height:190px;
+  width:130px;
   border-radius: 5px;
 }
 

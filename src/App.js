@@ -15,6 +15,7 @@ class BooksApp extends React.Component {
      * 
      * DONE DONE DONE 
      */
+    allBooks: []
 
   }
 
@@ -25,6 +26,7 @@ class BooksApp extends React.Component {
   getAllBooks = () => {
     BooksAPI.getAll().then((books) => {
       console.log(books);
+      this.setState({allBooks: books});
     })
   }
 
@@ -34,7 +36,13 @@ class BooksApp extends React.Component {
       <Route exact path="/" render={() => (
         <Redirect to="/ListBooks"/>
         )}/>
-        <Route path="/ListBooks" component={ListBooks}/>
+        <Route path="/ListBooks"
+        render={() => (
+          <ListBooks
+            books={this.state.allBooks}
+          />
+        )}
+        />
         <Route path="/SearchBook" component={SearchBook}/>
       </div>
     )

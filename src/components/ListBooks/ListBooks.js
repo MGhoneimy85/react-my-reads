@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Book from "../Book/Book";
 
 class ListBooks extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired
+  }
   render() {
     return (
       <div className="list-books">
@@ -15,12 +19,7 @@ class ListBooks extends Component {
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                        <li>
-                          <Book />
-                        </li>
-                        <li>
-                          <Book />
-                        </li>
+                      {this.props.books.filter((book) => (book.shelf === "currentlyReading")).map((book, index) => (<Book book={book} key={index} />))}
                       </ol>
                     </div>
                   </div>
@@ -28,12 +27,7 @@ class ListBooks extends Component {
                     <h2 className="bookshelf-title">Want to Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                        <li>
-                          <Book />
-                        </li>
-                        <li>
-                          <Book />
-                        </li>
+                        {this.props.books.filter((book) => (book.shelf === "wantToRead")).map((book, index) => (<Book book={book} key={index} />))}
                       </ol>
                     </div>
                   </div>
@@ -41,15 +35,7 @@ class ListBooks extends Component {
                     <h2 className="bookshelf-title">Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                        <li>
-                          <Book />
-                        </li>
-                        <li>
-                          <Book />
-                        </li>
-                        <li>
-                          <Book />
-                        </li>
+                        {this.props.books.filter((book) => (book.shelf === "read")).map((book, index) => (<Book book={book} key={index} />))}
                       </ol>
                     </div>
                   </div>
