@@ -5,7 +5,8 @@ import Book from "../Book/Book";
 
 class ListBooks extends Component {
   static propTypes = {
-    books: PropTypes.array.isRequired
+    books: PropTypes.array.isRequired,
+    onUpdate: PropTypes.func.isRequired
   }
   render() {
     return (
@@ -19,7 +20,7 @@ class ListBooks extends Component {
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                      {this.props.books.filter((book) => (book.shelf === "currentlyReading")).map((book, index) => (<Book book={book} key={index} />))}
+                      {this.props.books.filter((book) => (book.shelf === "currentlyReading")).map((book, index) => (<Book book={book} key={index} onUpdateBook={this.props.onUpdate} />))}
                       </ol>
                     </div>
                   </div>
@@ -27,7 +28,7 @@ class ListBooks extends Component {
                     <h2 className="bookshelf-title">Want to Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                        {this.props.books.filter((book) => (book.shelf === "wantToRead")).map((book, index) => (<Book book={book} key={index} />))}
+                        {this.props.books.filter((book) => (book.shelf === "wantToRead")).map((book, index) => (<Book book={book} key={index} onUpdateBook={this.props.onUpdate} />))}
                       </ol>
                     </div>
                   </div>
@@ -35,7 +36,7 @@ class ListBooks extends Component {
                     <h2 className="bookshelf-title">Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                        {this.props.books.filter((book) => (book.shelf === "read")).map((book, index) => (<Book book={book} key={index} />))}
+                        {this.props.books.filter((book) => (book.shelf === "read")).map((book, index) => (<Book book={book} key={index} onUpdateBook={this.props.onUpdate} />))}
                       </ol>
                     </div>
                   </div>

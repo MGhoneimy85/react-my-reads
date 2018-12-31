@@ -1,9 +1,10 @@
 import React from 'react'
-import { Route , Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import SearchBook from './components/SearchBook/SearchBook';
 import ListBooks from './components/ListBooks/ListBooks';
+import Loading from './components/Loading/Loading';
 
 class BooksApp extends React.Component {
   state = {
@@ -15,7 +16,8 @@ class BooksApp extends React.Component {
      * 
      * DONE DONE DONE 
      */
-    allBooks: []
+    allBooks: [],
+    loading: false
 
   }
 
@@ -24,26 +26,41 @@ class BooksApp extends React.Component {
   }
 
   getAllBooks = () => {
-    BooksAPI.getAll().then((books) => {
-      console.log(books);
-      this.setState({allBooks: books});
-    })
+    this.setState({ loading: true }, () => {
+      BooksAPI.getAll().then((books) => {
+        this.setState({ allBooks: books });
+        this.setState({ loading: false });
+      })
+    });
+  }
+
+  UpdateBookShelf = (book, shelf) => {
+    this.setState({ loading: true }, () => {
+      BooksAPI.update(book, shelf).then(() => {
+        this.getAllBooks();
+      })
+    });
+
   }
 
   render() {
     return (
+
       <div className="app">
-      <Route exact path="/" render={() => (
-        <Redirect to="/ListBooks"/>
-        )}/>
+        {this.state.loading ? <Loading /> : null}
+        {/* <Loading /> */}
+        <Route exact path="/" render={() => (
+          <Redirect to="/ListBooks" />
+        )} />
         <Route path="/ListBooks"
-        render={() => (
-          <ListBooks
-            books={this.state.allBooks}
-          />
-        )}
+          render={() => (
+            <ListBooks
+              books={this.state.allBooks}
+              onUpdate={this.UpdateBookShelf}
+            />
+          )}
         />
-        <Route path="/SearchBook" component={SearchBook}/>
+        <Route path="/SearchBook" component={SearchBook} />
       </div>
     )
   }
