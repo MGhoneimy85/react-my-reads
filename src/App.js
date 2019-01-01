@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import { Route, Redirect , Switch } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import SearchBook from './components/SearchBook/SearchBook';
@@ -45,27 +45,13 @@ class BooksApp extends React.Component {
 
   render() {
     return (
-
       <div className="app">
-        {this.state.loading ? <Loading /> : null}
-        <Route exact path="/" render={() => (
-          <Redirect to="/ListBooks" />
-        )} />
-        <Route path="/ListBooks"
-          render={() => (
-            <ListBooks
-              books={this.state.allBooks}
-              onUpdate={this.UpdateBookShelf}
-            />
-          )}
-        />
-        <Route path="/SearchBook" 
-        render={({history}) => (
-          <SearchBook
-            books={this.state.allBooks}
-            onUpdate={this.UpdateBookShelf}
-          />
-        )} />
+      {this.state.loading ? <Loading /> : null}
+      <Switch>
+        <Route exact path="/" render={() => (<Redirect to="/ListBooks" />)} />
+        <Route path="/ListBooks" render={() => (<ListBooks books={this.state.allBooks} onUpdate={this.UpdateBookShelf} />)}/>
+        <Route path="/SearchBook" render={({history}) => (<SearchBook books={this.state.allBooks} onUpdate={this.UpdateBookShelf} />)} />
+      </Switch>
       </div>
     )
   }
