@@ -48,7 +48,7 @@ class BooksApp extends React.Component {
       <div className="app">
       {this.state.loading ? <Loading /> : null}
       <Switch>
-        <Route exact path="/" render={() => (<Redirect to="/ListBooks" />)} />
+        <Route path="/react-my-reads" render={() => (<Redirect to="/ListBooks" />)} />
         <Route path="/ListBooks" render={() => (<ListBooks books={this.state.allBooks} onUpdate={this.UpdateBookShelf} />)}/>
         <Route path="/SearchBook" render={({history}) => (<SearchBook books={this.state.allBooks} onUpdate={this.UpdateBookShelf} />)} />
       </Switch>

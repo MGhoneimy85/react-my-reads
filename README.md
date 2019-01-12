@@ -4,6 +4,8 @@ This is a react app for book shelfs categories also searching for books and addi
 there is 3 main shelf 1- currently reading 2- want to read 3- read so you can keep track for books u have read or you want to read 
 the app is developed using create-react-app and the starter code of udacity course then i made some slight change for the UI theme and i added functionality to switch between categories and update the UI after change also to navigate to the search page to search for new books all keywords are saved search_terms file also i added loading componennt just to dim the screen while the response try to update data and rerender the UI with loading text 
 
+demo link click [here](http://MGhoneimy85.github.io/react-my-reads)
+
 ## Quick start
 
 To get started developing right away:
