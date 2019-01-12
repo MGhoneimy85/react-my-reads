@@ -1,14 +1,14 @@
 {
   "main.css": "/react-my-reads/static/css/main.e821e019.chunk.css",
-  "main.js": "/react-my-reads/static/js/main.2cb9c03b.chunk.js",
-  "main.js.map": "/react-my-reads/static/js/main.2cb9c03b.chunk.js.map",
-  "static/js/1.cfd944a0.chunk.js": "/react-my-reads/static/js/1.cfd944a0.chunk.js",
-  "static/js/1.cfd944a0.chunk.js.map": "/react-my-reads/static/js/1.cfd944a0.chunk.js.map",
+  "main.js": "/react-my-reads/static/js/main.ebf49acf.chunk.js",
+  "main.js.map": "/react-my-reads/static/js/main.ebf49acf.chunk.js.map",
+  "static/js/1.3eb2a6d9.chunk.js": "/react-my-reads/static/js/1.3eb2a6d9.chunk.js",
+  "static/js/1.3eb2a6d9.chunk.js.map": "/react-my-reads/static/js/1.3eb2a6d9.chunk.js.map",
   "runtime~main.js": "/react-my-reads/static/js/runtime~main.683e8b35.js",
   "runtime~main.js.map": "/react-my-reads/static/js/runtime~main.683e8b35.js.map",
   "static/css/main.e821e019.chunk.css.map": "/react-my-reads/static/css/main.e821e019.chunk.css.map",
   "static/media/App.css": "/react-my-reads/static/media/arrow-drop-down.78c6f53b.svg",
   "index.html": "/react-my-reads/index.html",
-  "precache-manifest.c02c6a0769c9cc029d086cbc21e995f0.js": "/react-my-reads/precache-manifest.c02c6a0769c9cc029d086cbc21e995f0.js",
+  "precache-manifest.a17e6fe4bce99ae8bb0b95b2ec50d9c5.js": "/react-my-reads/precache-manifest.a17e6fe4bce99ae8bb0b95b2ec50d9c5.js",
   "service-worker.js": "/react-my-reads/service-worker.js"
 }
