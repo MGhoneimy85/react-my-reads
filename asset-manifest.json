@@ -1,14 +1,14 @@
 {
   "main.css": "/react-my-reads/static/css/main.e821e019.chunk.css",
-  "main.js": "/react-my-reads/static/js/main.1856304e.chunk.js",
-  "main.js.map": "/react-my-reads/static/js/main.1856304e.chunk.js.map",
-  "static/js/1.3eb2a6d9.chunk.js": "/react-my-reads/static/js/1.3eb2a6d9.chunk.js",
-  "static/js/1.3eb2a6d9.chunk.js.map": "/react-my-reads/static/js/1.3eb2a6d9.chunk.js.map",
+  "main.js": "/react-my-reads/static/js/main.91af65e1.chunk.js",
+  "main.js.map": "/react-my-reads/static/js/main.91af65e1.chunk.js.map",
+  "static/js/1.cfd944a0.chunk.js": "/react-my-reads/static/js/1.cfd944a0.chunk.js",
+  "static/js/1.cfd944a0.chunk.js.map": "/react-my-reads/static/js/1.cfd944a0.chunk.js.map",
   "runtime~main.js": "/react-my-reads/static/js/runtime~main.683e8b35.js",
   "runtime~main.js.map": "/react-my-reads/static/js/runtime~main.683e8b35.js.map",
   "static/css/main.e821e019.chunk.css.map": "/react-my-reads/static/css/main.e821e019.chunk.css.map",
   "static/media/App.css": "/react-my-reads/static/media/arrow-back.3687aa98.svg",
   "index.html": "/react-my-reads/index.html",
-  "precache-manifest.1a8ba9bae80de483770a1b7dd3e056ef.js": "/react-my-reads/precache-manifest.1a8ba9bae80de483770a1b7dd3e056ef.js",
+  "precache-manifest.ba57b129b8f19cf56aad875a9740bd01.js": "/react-my-reads/precache-manifest.ba57b129b8f19cf56aad875a9740bd01.js",
   "service-worker.js": "/react-my-reads/service-worker.js"
 }
