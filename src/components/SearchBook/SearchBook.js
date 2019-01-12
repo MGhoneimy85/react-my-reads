@@ -65,7 +65,7 @@ class SearchBook extends Component {
         {this.state.loading ? <Loading /> : null}
         
         <div className="search-books-bar">
-          <Link className="close-search" to='/ListBooks'>Back</Link>
+          <Link className="close-search" to='/react-my-reads'>Back</Link>
           <div className="search-books-input-wrapper">
             {/*
                   NOTES: The search from BooksAPI is limited to a particular set of search terms.
