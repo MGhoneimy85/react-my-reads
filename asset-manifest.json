@@ -1,14 +1,14 @@
 {
   "main.css": "/react-my-reads/static/css/main.e821e019.chunk.css",
-  "main.js": "/react-my-reads/static/js/main.643cea45.chunk.js",
-  "main.js.map": "/react-my-reads/static/js/main.643cea45.chunk.js.map",
+  "main.js": "/react-my-reads/static/js/main.bbf562ae.chunk.js",
+  "main.js.map": "/react-my-reads/static/js/main.bbf562ae.chunk.js.map",
   "static/js/1.cfd944a0.chunk.js": "/react-my-reads/static/js/1.cfd944a0.chunk.js",
   "static/js/1.cfd944a0.chunk.js.map": "/react-my-reads/static/js/1.cfd944a0.chunk.js.map",
   "runtime~main.js": "/react-my-reads/static/js/runtime~main.683e8b35.js",
   "runtime~main.js.map": "/react-my-reads/static/js/runtime~main.683e8b35.js.map",
   "static/css/main.e821e019.chunk.css.map": "/react-my-reads/static/css/main.e821e019.chunk.css.map",
-  "static/media/App.css": "/react-my-reads/static/media/search.740a0cdd.svg",
+  "static/media/App.css": "/react-my-reads/static/media/arrow-drop-down.78c6f53b.svg",
   "index.html": "/react-my-reads/index.html",
-  "precache-manifest.d4445e4b881a6737f0df97b5ce463cc3.js": "/react-my-reads/precache-manifest.d4445e4b881a6737f0df97b5ce463cc3.js",
+  "precache-manifest.6a11134457c962d912f45551c5677724.js": "/react-my-reads/precache-manifest.6a11134457c962d912f45551c5677724.js",
   "service-worker.js": "/react-my-reads/service-worker.js"
 }
